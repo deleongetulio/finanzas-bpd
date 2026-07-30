@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+.db.env
+firefly-iii/.env
+firefly-iii/.db.env
+firefly-iii/token.env
+client_secret.json
+token.json
+config.json
+transacciones*.json
+firefly_synced.json
+sync_log.txt
+dashboard.html
+.DS_Store
+Thumbs.db
