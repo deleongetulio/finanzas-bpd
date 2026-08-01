@@ -12,5 +12,6 @@ transacciones*.json
 firefly_synced.json
 sync_log.txt
 dashboard.html
+demo/dashboard_demo.html
 .DS_Store
 Thumbs.db

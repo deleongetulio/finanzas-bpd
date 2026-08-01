@@ -1,6 +1,6 @@
 # Automatizacion de Finanzas Personales (Gmail -> categorizacion con LLM -> Firefly III)
 
-*[English version](README.md)*
+*Version original - [traduccion al ingles](README.md)*
 
 Un pipeline de extremo a extremo que convierte correos de notificacion bancaria
 en un presupuesto categorizado y autohospedado, sin captura manual de datos.
@@ -45,6 +45,39 @@ notificacion bancaria por monto y fecha (+-1 dia) y sustituye el nombre.
 - **Sin contabilidad manual.** El punto central es que una transaccion no
   requiere ningun toque despues de la configuracion inicial -el correo de
   notificacion es la unica entrada.
+
+## Demo
+
+No necesita credenciales para ver el resultado: `python demo/generar_dashboard_demo.py`
+genera `demo/dashboard_demo.html` a partir de 60 transacciones sinteticas
+(comercios ficticios, sin datos de gasto reales) usando la misma funcion
+`generate_dashboard()` del pipeline en produccion.
+
+![Dashboard con datos sinteticos](docs/img/dashboard.png)
+*Desglose por categoria, gasto diario y una tabla de transacciones buscable -
+todo generado a partir de datos ficticios por `demo/generar_dashboard_demo.py`.*
+
+### Firefly III en si
+
+Las capturas de arriba son del dashboard propio de `finanzas_bpd.py`. Lo que
+realmente sostiene el presupuesto a largo plazo es
+[Firefly III](https://www.firefly-iii.org/), la herramienta autohospedada a
+la que este pipeline empuja las transacciones ya categorizadas (ver
+Arquitectura arriba). Estas capturas son de una instancia local desechable
+poblada con el mismo tipo de datos ficticios - no el presupuesto real del
+autor.
+
+![Dashboard de Firefly III](docs/img/firefly_dashboard.png)
+*Tendencia de valor neto y balances de cuenta a lo largo de un mes, generado
+enteramente con transacciones sinteticas empujadas via la API de Firefly III.*
+
+![Presupuestos en Firefly III](docs/img/firefly_presupuestos.png)
+*Seguimiento de gasto por presupuesto - una de las vistas que `sync_all.py`
+mantiene al dia sin ninguna captura manual.*
+
+![Transacciones en Firefly III](docs/img/firefly_transacciones.png)
+*La lista de transacciones que arma Firefly III a partir de lo que empuja
+`finanzas_bpd.py`: categoria y presupuesto ya asignados, buscable y filtrable.*
 
 ## Configuracion
 
@@ -101,3 +134,7 @@ Parseo de correo a escala, uso de LLM por capas consciente del costo, diseno
 de pipeline idempotente, integracion con APIs REST (Gmail, Anthropic, Google
 Places, Firefly III), y autohospedaje de una herramienta de presupuesto con
 Docker.
+
+---
+
+[getuliodeleon.com](https://getuliodeleon.com/es/) | [LinkedIn](https://www.linkedin.com/in/getulio-cesar-de-leon-fernandez-05267a3b3/) | [GitHub](https://github.com/deleongetulio)
