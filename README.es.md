@@ -137,4 +137,4 @@ Docker.
 
 ---
 
-[getuliodeleon.com](https://getuliodeleon.com/es/) | [LinkedIn](https://www.linkedin.com/in/getulio-cesar-de-leon-fernandez-05267a3b3/) | [GitHub](https://github.com/deleongetulio)
+[getuliodeleon.com](https://getuliodeleon.com/es/) | [LinkedIn](https://www.linkedin.com/in/getuliodeleon/) | [GitHub](https://github.com/deleongetulio)
