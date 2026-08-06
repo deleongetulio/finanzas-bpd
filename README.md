@@ -1,4 +1,8 @@
+`GITHUB.COM/DELEONGETULIO`
+
 # Personal Finance Automation (Gmail -> LLM categorization -> Firefly III)
+
+---
 
 *Translated version - [original in Spanish](README.es.md)*
 
