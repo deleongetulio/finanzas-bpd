@@ -1,8 +1,6 @@
-`GITHUB.COM/DELEONGETULIO`
+![finanzas-bpd](assets/social-card.png)
 
 # Personal Finance Automation (Gmail -> LLM categorization -> Firefly III)
-
----
 
 *Translated version - [original in Spanish](README.es.md)*
 
